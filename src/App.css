@@ -1,0 +1,218 @@
+/* TEMEL STİLLER */
+:root {
+  --primary: #ff85a2;
+  --secondary: #ff4785;
+  --light-pink: #fff0f5;
+  --dark-pink: #ff9eb5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff9fb;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  color: white;
+  box-shadow: 0 10px 20px rgba(255, 133, 162, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* INPUT ALANI */
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.submit-btn {
+  background: white;
+  color: var(--secondary);
+  border: none;
+  border-radius: 15px;
+  padding: 0 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.submit-btn.editing {
+  background: #ffd166;
+  color: white;
+}
+
+.cancel-btn {
+  background: #ef476f;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+/* FİLTRELER */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.filters button {
+  background: var(--light-pink);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filters button.active {
+  background: var(--secondary);
+  color: white;
+}
+
+/* TODO LİSTESİ */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 1.2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  gap: 15px;
+}
+
+/* CHECKBOX */
+.checkbox {
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  background: white;
+}
+
+.checkbox span {
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.todo-item.completed .checkbox {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* TODO İÇERİĞİ */
+.todo-content {
+  flex: 1;
+}
+
+.todo-content p {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.completed-text {
+  position: relative;
+  color: #aaa;
+}
+
+.completed-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  transform: translateY(-50%);
+}
+
+.todo-content small {
+  color: #aaa;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 3px;
+}
+
+/* ACTION BUTONLARI */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn, .delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.edit-btn {
+  color: #4CAF50;
+}
+
+.delete-btn {
+  color: var(--secondary);
+}
+
+/* KONFETİ EFEKTİ */
+.confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.confetti-piece {
+  position: absolute;
+  border-radius: 50%;
+}
