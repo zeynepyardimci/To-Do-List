@@ -1,1 +1,1 @@
-Bu uygulamayı DeepSeek yardımıyla yazmış bulunmaktayım.
+Bu uygulama basit bir Todo List uygulamasıdır ve DeepSeek yardımıyla yazmış bulunmaktayım.
